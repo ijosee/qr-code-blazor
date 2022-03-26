@@ -38,7 +38,7 @@ jobs:
       - name: Change base-tag in index.html from / to qr-code-blazor
         run: sed -i 's/<base href="\/" \/>/<base href="\/qr-code-blazor\/" \/>/g' release/wwwroot/index.html
         
-      # changes the base-tag in index.html from '/' to 'BlazorGitHubPagesDemo' to match GitHub Pages repository subdirectory
+      # fix service-worker-assets.js hashes
       - name: Fix service-worker-assets.js hashes
         working-directory: release/wwwroot
         run: |
